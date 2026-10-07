@@ -1,0 +1,51 @@
+# ===== Секреты =====
+.env
+*.env
+!.env.example
+
+# ===== Виртуальное окружение =====
+.venv/
+venv/
+env/
+ENV/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ===== База данных =====
+# users_database.db лежит в репозитории как ДЕМО-ДАННЫЕ (каталог товаров).
+# Все остальные файлы БД игнорируются.
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+!users_database.db
+
+# ===== Пользовательские файлы =====
+# Фото, загруженные пользователями через сайт, не должны попадать в репозиторий.
+# Папка uploads/user_1/ закоммичена как демонстрация результата работы генератора.
+uploads/*
+!uploads/user_1/
+
+# ===== Файлы ОС и редакторов =====
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# ===== Прочее =====
+*.log

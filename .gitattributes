@@ -1,0 +1,39 @@
+# Нормализация переводов строк (важно для Windows/Linux)
+* text=auto
+
+# Python и веб-файлы — LF
+*.py   text eol=lf
+*.js   text eol=lf
+*.css  text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+
+# Windows-скрипты — CRLF
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Бинарные файлы (не трогать, не нормализовать)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+*.ico  binary
+*.db   binary
+*.ttf  binary
+*.woff binary
+*.woff2 binary
+
+# Показать статистику по бинарным файлам, а не diff
+*.png  -diff
+*.jpg  -diff
+*.jpeg -diff
+*.webp -diff
+*.db   -diff
+
+# Папку images/ и uploads/ не учитывать в статистике языка репозитория
+images/*  linguist-vendored
+uploads/* linguist-vendored
